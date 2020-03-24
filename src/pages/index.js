@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 import SiteImages from "../components/atoms/SiteImages"
 import styled from "styled-components"
 import { GridContainer, GridItem } from "../components/Grid"
-import PhotoCamera from "@material-ui/icons/photoCamera"
+import PhotoCamera from "@material-ui/icons/photo"
 import IconButton from "@material-ui/core/IconButton"
 const BodyText = ({ children }) => {
   return (
