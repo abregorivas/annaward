@@ -47,6 +47,13 @@ export const SiteImg = ({ altText, imgIndex, height }) => {
           }
         }
       }
+      img7: file(relativePath: { eq: "PROJECTS/anna_choreo.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -92,9 +99,13 @@ export const SiteImg = ({ altText, imgIndex, height }) => {
       alt={altText}
     />
   )
-  //   const Img7 = () => (
-  //     <Img fluid={data.img6.childImageSharp.fluid} style={{ height: `${height}px` }} alt={altText}/>
-  //   )
+  const Img7 = () => (
+    <Img
+      fluid={data.img7.childImageSharp.fluid}
+      style={{ height: `${height}px` }}
+      alt={altText}
+    />
+  )
   //   const Img8 = () => (
   //     <Img fluid={data.img7.childImageSharp.fluid} style={{ height: `${height}px` }} alt={altText}/>
   //   )
@@ -107,7 +118,7 @@ export const SiteImg = ({ altText, imgIndex, height }) => {
   //   const Img11 = () => (
   //     <Img fluid={data.img10.childImageSharp.fluid} style={{ height: `${height}px`}} alt={altText}/>
   //   )
-  const images = [Img1, Img2, Img3, Img4, Img5, Img6]
+  const images = [Img1, Img2, Img3, Img4, Img5, Img6, Img7]
 
   return <>{images[imgIndex]()}</>
 }
