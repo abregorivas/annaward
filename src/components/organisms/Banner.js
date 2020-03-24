@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { makeStyles } from "@material-ui/core/styles"
 import Img from "gatsby-image"
 import AppBar from "@material-ui/core/AppBar"
+import { rebeccapurple } from "color-name"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -10,6 +11,10 @@ const useStyles = makeStyles(theme => ({
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
+    background: "transparent",
+    backShadow: "none",
+    // width: "100vw",
+    // height: 160,
   },
 }))
 
@@ -29,11 +34,7 @@ export const Banner = () => {
     }
   `)
   return (
-    <AppBar
-      position="fixed"
-      className={classes.appBar}
-      style={{ background: "transparent", boxShadow: "none" }}
-    >
+    <AppBar position="fixed" className={classes.appBar}>
       <Img fluid={data.placeholderImage.childImageSharp.fluid} />
     </AppBar>
   )
