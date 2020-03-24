@@ -54,6 +54,27 @@ export const SiteImg = ({ altText, imgIndex, height }) => {
           }
         }
       }
+      img8: file(relativePath: { eq: "CHOREOGRAPHY/anna_may09_01.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      img9: file(relativePath: { eq: "CHOREOGRAPHY/anna_may09_05.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      img10: file(relativePath: { eq: "CHOREOGRAPHY/teach_01.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -106,19 +127,31 @@ export const SiteImg = ({ altText, imgIndex, height }) => {
       alt={altText}
     />
   )
-  //   const Img8 = () => (
-  //     <Img fluid={data.img7.childImageSharp.fluid} style={{ height: `${height}px` }} alt={altText}/>
-  //   )
-  //   const Img9 = () => (
-  //     <Img fluid={data.img8.childImageSharp.fluid} style={{ height: `${height}px` }} alt={altText}/>
-  //   )
-  //   const Img10 = () => (
-  //     <Img fluid={data.img9.childImageSharp.fluid} style={{ height: `${height}px`}} alt={altText}/>
-  //   )
+  const Img8 = () => (
+    <Img
+      fluid={data.img8.childImageSharp.fluid}
+      style={{ height: `${height}px` }}
+      alt={altText}
+    />
+  )
+  const Img9 = () => (
+    <Img
+      fluid={data.img9.childImageSharp.fluid}
+      style={{ height: `${height}px` }}
+      alt={altText}
+    />
+  )
+  const Img10 = () => (
+    <Img
+      fluid={data.img10.childImageSharp.fluid}
+      style={{ height: `${height}px` }}
+      alt={altText}
+    />
+  )
   //   const Img11 = () => (
   //     <Img fluid={data.img10.childImageSharp.fluid} style={{ height: `${height}px`}} alt={altText}/>
   //   )
-  const images = [Img1, Img2, Img3, Img4, Img5, Img6, Img7]
+  const images = [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9, Img10]
 
   return <>{images[imgIndex]()}</>
 }
