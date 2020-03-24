@@ -23,6 +23,10 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     padding: theme.spacing(3),
     marginLeft: 240,
+    marginTop: 132,
+    backgroundColor: "rebeccapurple",
+    color: "white",
+    height: "100%",
   },
   toolbar: theme.mixins.toolbar,
 }))
@@ -38,11 +42,12 @@ const Layout = ({ children }) => {
 
       <Banner />
       <Sidebar />
+
       <main className={classes.content}>
         <div className={classes.toolbar} />
         {children}
+        <Footer />
       </main>
-      <Footer />
     </>
   )
 }
