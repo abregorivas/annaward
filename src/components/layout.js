@@ -1,45 +1,48 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import CssBaseline from "@material-ui/core/CssBaseline"
+import { ThemeProvider, makeStyles } from "@material-ui/core/styles"
+import annaTheme from "../theme"
+import GlobalStyle from "../GlobalStyle"
 
-import Header from "./header"
+import { Footer, Banner, Sidebar } from "../components/organisms"
+
 import "./layout.css"
 
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
+    marginLeft: 240,
+  },
+  toolbar: theme.mixins.toolbar,
+}))
+
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  const classes = useStyles()
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <CssBaseline />
+      <GlobalStyle />
+      <ThemeProvider theme={annaTheme}></ThemeProvider>
+
+      <Banner />
+      <Sidebar />
+      <main className={classes.content}>
+        <div className={classes.toolbar} />
+        {children}
+      </main>
+      <Footer />
     </>
   )
 }
