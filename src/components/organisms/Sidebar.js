@@ -4,7 +4,8 @@ import Drawer from "@material-ui/core/Drawer"
 import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
 import ListItemText from "@material-ui/core/ListItemText"
-
+import { Link } from "gatsby"
+import { Link as MatLink } from "@material-ui/core"
 const drawerWidth = 240
 
 const useStyles = makeStyles(theme => ({
@@ -16,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     flexShrink: 0,
   },
   drawerPaper: {
-    paddingTop: theme.spacing(10),
+    paddingTop: theme.spacing(18),
     width: drawerWidth,
   },
   content: {
@@ -40,6 +41,7 @@ export const Sidebar = () => {
         }}
       >
         <div className={classes.toolbar} />
+
         <List>
           {[
             "Home",
@@ -48,13 +50,18 @@ export const Sidebar = () => {
             "Choreography",
             "History",
             "Gallery",
-            "Revuews",
+            "Reviews",
             "Video",
             "Contact",
             "Links",
           ].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemText primary={text} />
+              <Link
+                to={text === "Home" ? "/" : text.toLowerCase()}
+                style={{ textDecoration: "none" }}
+              >
+                <ListItemText primary={text} />
+              </Link>
             </ListItem>
           ))}
         </List>
