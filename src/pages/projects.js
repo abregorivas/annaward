@@ -80,8 +80,7 @@ export default () => (
     ></iframe>
     <p>
       <a href="https://vimeo.com/255217407" style={{ color: "white" }}>
-        Dallas - Krassovska dancers of Ballet Foundation - Anna Ward's
-        choreography
+        Dallas neo-classical ballet - 2013
       </a>{" "}
       from <a href="https://vimeo.com/user78822325">Anna Ward</a> on
       <a href="https://vimeo.com">Vimeo</a>.
