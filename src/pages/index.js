@@ -44,10 +44,12 @@ const IndexPage = () => {
         About Me
       </Typography>
       <BodyText>
-        Anna Ward personally trained at RAD school and studied under Madame
-        Nathalie Krassovska. She also danced as a professional in Krassovska’s
-        Ballet Jeunesse for many years. Her performances included Chopinanna,
-        Pas de Quatre, Paquita, La Bayadere, and Giselle to name a few.
+        Anna Ward personally trained and studied under Madame Nathalie
+        Krassovska in the Russian classical style. She is also schooled in the
+        Royal Accademy of Dancing (RAD) method. She also danced as a
+        professional in Krassovska’s Ballet Jeunesse for many years. Her
+        performances included Chopinanna, Pas de Quatre, Paquita, La Bayadere,
+        and Giselle to name a few.
       </BodyText>
       <BodyText>
         She holds a personal letter of recommendation of excellence from Madame
