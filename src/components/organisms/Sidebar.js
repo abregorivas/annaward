@@ -52,7 +52,6 @@ export const Sidebar = () => {
             "Gallery",
             "Reviews",
             "Video",
-            "Contact",
             "Links",
           ].map((text, index) => (
             <ListItem button key={text}>
@@ -64,6 +63,11 @@ export const Sidebar = () => {
               </Link>
             </ListItem>
           ))}
+          <ListItem button>
+            <Link to="#contact" style={{ textDecoration: "none" }}>
+              <ListItemText primary="Contact" />
+            </Link>
+          </ListItem>
         </List>
       </Drawer>
     </div>

@@ -152,7 +152,7 @@ export const Footer = () => {
             <Typography variant="caption">
               &copy; 2019 annaward-ballet.com
             </Typography>
-            <Typography variant="caption">
+            <Typography variant="caption" id="contact">
               <StyledIcon color="primary">
                 <Email size={16} style={{ marginRight: "16px" }} />
                 <a
